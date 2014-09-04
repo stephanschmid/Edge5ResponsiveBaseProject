@@ -96,8 +96,7 @@ admingenerator_generator:
     logout_path: fos_user_security_logout
 
     stylesheets: ~
-    javascripts:
-        - { path: bundles/edge5appbackend/js/backend.js }
+    javascripts: ~
 
 admingenerator_user:
     login_template: Edge5BackendBundle::base_admin.html.twig
