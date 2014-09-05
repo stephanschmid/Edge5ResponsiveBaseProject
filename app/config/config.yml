@@ -48,7 +48,7 @@ assetic:
         uglifycss:
             bin: %uglify_css_path%
         sass:
-            bin: /usr/bin/sass
+            bin: %sass_bin%
         compass:
             bin: %compass_bin%
         edgefivecompass:

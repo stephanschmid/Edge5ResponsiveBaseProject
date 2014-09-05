@@ -14,6 +14,7 @@ parameters:
     locale:            en
     locales:           [en,de]
 
+    sass_bin: /usr/bin/sass
     compass_bin: /usr/bin/compass
     uglify_js_path: /usr/local/bin/uglifyjs
     uglify_css_path: /usr/local/bin/uglifycss
