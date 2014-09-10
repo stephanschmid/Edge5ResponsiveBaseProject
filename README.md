@@ -25,23 +25,19 @@ It contains an empty FrontendBundle and a customizable BackendBundle based on th
     $ php app/console propel:database:create
     $ php app/console propel:sql:insert --force
 
-4. Run assets install and cache warmup commands
+4. Run some commands
 -------
 
-    $ php app/console assets:install --symlink
     $ php app/console cache:warmup
+    $ php app/console assetic:dump
+    $ php app/console assets:install
 
 5. Create FOS superAdmin user
 -------
 
     $ php app/console fos:user:create --super-admin
-    
-6. Dump public assets
--------
 
-    $ php app/console assetic:dump
-
-7. Add your own Git repository
+6. Add your own Git repository
 -------
 
     $ git remote rm origin
