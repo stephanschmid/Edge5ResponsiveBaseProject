@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Propel\PropelBundle\PropelBundle(),
             new Edge5\AppBackendBundle\Edge5AppBackendBundle(),
             new Avocode\FormExtensionsBundle\AvocodeFormExtensionsBundle(),
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new SunCat\MobileDetectBundle\MobileDetectBundle(),
