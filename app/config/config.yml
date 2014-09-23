@@ -94,6 +94,9 @@ admingenerator_generator:
     stylesheets: ~
     javascripts: ~
 
+admingenerator_user:
+    login_template: Edge5BackendBundle::base_admin.html.twig
+
 edge5_app_backend:
     dashboard_template: Edge5BackendBundle::base_dashboard.html.twig
 

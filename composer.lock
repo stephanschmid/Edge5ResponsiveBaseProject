@@ -894,12 +894,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Edge5/Edge5AppBackendBundle.git",
-                "reference": "0a5a7864ad34093a1d2114139d7ff2460c7be899"
+                "reference": "95f4beb303b88344408f829fbc81123ac8395de8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Edge5/Edge5AppBackendBundle/zipball/0a5a7864ad34093a1d2114139d7ff2460c7be899",
-                "reference": "0a5a7864ad34093a1d2114139d7ff2460c7be899",
+                "url": "https://api.github.com/repos/Edge5/Edge5AppBackendBundle/zipball/95f4beb303b88344408f829fbc81123ac8395de8",
+                "reference": "95f4beb303b88344408f829fbc81123ac8395de8",
                 "shasum": ""
             },
             "require": {
@@ -948,7 +948,7 @@
                 "backend",
                 "base"
             ],
-            "time": "2014-09-22 07:10:16"
+            "time": "2014-09-23 11:16:12"
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
@@ -1626,12 +1626,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "cf81147590cfd99b8c51ceabdd991e3d7ce44b4b"
+                "reference": "de93760710c59b4fd598ab136642d8737e04665c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/cf81147590cfd99b8c51ceabdd991e3d7ce44b4b",
-                "reference": "cf81147590cfd99b8c51ceabdd991e3d7ce44b4b",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/de93760710c59b4fd598ab136642d8737e04665c",
+                "reference": "de93760710c59b4fd598ab136642d8737e04665c",
                 "shasum": ""
             },
             "require": {
@@ -1692,7 +1692,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2014-09-16 00:53:54"
+            "time": "2014-09-22 17:24:20"
         },
         {
             "name": "liip/imagine-bundle",
@@ -1701,12 +1701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "38f4d2ed7135782474628b64e5c1623b649fdac2"
+                "reference": "eb695e51378e35a5efdf71e8ef21597758c43a73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/38f4d2ed7135782474628b64e5c1623b649fdac2",
-                "reference": "38f4d2ed7135782474628b64e5c1623b649fdac2",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/eb695e51378e35a5efdf71e8ef21597758c43a73",
+                "reference": "eb695e51378e35a5efdf71e8ef21597758c43a73",
                 "shasum": ""
             },
             "require": {
@@ -1766,7 +1766,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2014-09-17 09:58:36"
+            "time": "2014-09-22 09:19:19"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -2389,12 +2389,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "dd102e9fa7d95440ad0adaf80ee0b64b3d2cce05"
+                "reference": "f2b3c59344f081d0e24473639fe38a22e5b4a202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/dd102e9fa7d95440ad0adaf80ee0b64b3d2cce05",
-                "reference": "dd102e9fa7d95440ad0adaf80ee0b64b3d2cce05",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/f2b3c59344f081d0e24473639fe38a22e5b4a202",
+                "reference": "f2b3c59344f081d0e24473639fe38a22e5b4a202",
                 "shasum": ""
             },
             "require": {
@@ -2428,7 +2428,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2014-09-01 11:55:41"
+            "time": "2014-09-23 05:18:24"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2812,12 +2812,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "99e6d66c256d7c6dd844f8f85cd8764fe2537251"
+                "reference": "1c254a4f091c9eddc07211f86dba008748d68bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/99e6d66c256d7c6dd844f8f85cd8764fe2537251",
-                "reference": "99e6d66c256d7c6dd844f8f85cd8764fe2537251",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/1c254a4f091c9eddc07211f86dba008748d68bc1",
+                "reference": "1c254a4f091c9eddc07211f86dba008748d68bc1",
                 "shasum": ""
             },
             "require": {
@@ -2918,7 +2918,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-09-20 06:08:40"
+            "time": "2014-09-23 05:25:11"
         },
         {
             "name": "twig/extensions",
