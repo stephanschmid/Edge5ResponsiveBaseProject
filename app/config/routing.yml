@@ -1,5 +1,6 @@
 edge5_backend:
-    resource: "@Edge5BackendBundle/Resources/config/routing.yml"
+    resource: "@Edge5BackendBundle/Controller/"
+    type:     annotation
     prefix:   /admin
 
 backend_bundle:

@@ -84,7 +84,6 @@ fos_user:
 
 admingenerator_generator:
     base_admin_template: Edge5BackendBundle::base_admin.html.twig
-    dashboard_welcome_path: dashboard
 
     templates_dirs: ['%kernel.root_dir%/../vendor/edge5/app-backend-bundle/Edge5/AppBackendBundle/Resources/templates']
 
@@ -92,14 +91,11 @@ admingenerator_generator:
     use_doctrine_odm: false
     use_propel: true
 
-    login_path: startAdmin
-    logout_path: fos_user_security_logout
-
     stylesheets: ~
     javascripts: ~
 
-admingenerator_user:
-    login_template: Edge5BackendBundle::base_admin.html.twig
+edge5_app_backend:
+    dashboard_template: Edge5BackendBundle::base_dashboard.html.twig
 
 propel:
     path:       "%kernel.root_dir%/../vendor/propel/propel1"
@@ -118,9 +114,6 @@ knp_menu:
 
 jms_security_extra:
     expressions: true
-
-edge5_app_backend:
-    dashboard_template: Edge5BackendBundle::base_dashboard.html.twig
 
 liip_imagine:
     filter_sets:

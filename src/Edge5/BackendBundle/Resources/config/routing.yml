@@ -1,3 +1,0 @@
-_dashboardIndex:
-    pattern:   /dashboard
-    defaults:  { _controller: Edge5BackendBundle:Dashboard:index }
