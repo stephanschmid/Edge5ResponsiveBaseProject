@@ -115,6 +115,15 @@ knp_menu:
 jms_security_extra:
     expressions: true
 
+jms_di_extra:
+    locations:
+        all_bundles: false
+        bundles: [Edge5AppBackendBundle]
+        directories: ["%kernel.root_dir%/../vendor/edge5"]
+
+edge5_app_backend:
+    dashboard_template: Edge5BackendBundle::base_dashboard.html.twig
+
 liip_imagine:
     filter_sets:
         # Edge5 AppBackendBundle filter sets
