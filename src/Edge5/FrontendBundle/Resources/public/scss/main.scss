@@ -10,17 +10,30 @@
  * ==|== normalize ==========================================================
  */
 
-@import "constants.scss";
-@import "mixins.scss";
+@import "compass";
 
-@import "normalize.scss";
+@import "vendor/reset";
+@import "vendor/normalize";
 
 /* ==|== primary styles =====================================================
 	 Author: Edge5 AG Frontend
 	 ========================================================================== */
 
-@import "styles/01_basics";
-@import "styles/50_media-queries";
+@import "settings/settings";
 
-@import "helpers.scss";
-@import "print.scss";
+@import "mixins/standard_mixins";
+@import "mixins/mediaqueries";
+@import "mixins/px2percent";
+@import "mixins/retina_sprites";
+@import "mixins/triangle";
+@import "mixins/webkit_inline_block_fix";
+
+@import "helpers/fonts";
+@import "helpers/helpers";
+@import "helpers/print";
+@import "helpers/visibility";
+
+@import "styles/0.base";
+@import "styles/motion";
+@import "styles/states";
+@import "styles/1.layout";

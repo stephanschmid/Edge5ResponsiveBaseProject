@@ -1,0 +1,37 @@
+
+// Example on how to include fonts that still work in IE8
+
+//
+//@font-face {
+//	font-family: $transatFonyFamily;
+//	src: url("../fonts/TransatTextLightOblique.eot");
+//	src: url("../fonts/TransatTextLightOblique.eot?#iefix") format('eot');
+//	font-weight: 100;
+//	font-style: italic, oblique;
+//}
+
+
+@mixin font-weight($weight){
+	@if $weight == "light" {
+		font-weight: 100;
+	}
+	@if $weight == "regular" {
+		font-weight: 400;
+	}
+	@if $weight == "bold" {
+		font-weight: 700;
+	}
+}
+
+@mixin font-style($style) {
+	// working w/ 400 font-weight.
+	font-style: $style;
+}
+
+@mixin normal-font() {
+	@include font-weight(regular);
+	-webkit-font-smoothing: antialiased;
+}
+%normal-font {
+	@include normal-font();
+}

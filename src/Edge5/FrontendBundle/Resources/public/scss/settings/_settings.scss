@@ -1,0 +1,63 @@
+//@import "compass";
+
+// external font
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
+
+// base path
+$base-path: "/bundles/edge5frontend";
+
+
+
+// colors
+$white: #FFF;
+$black: #000;
+
+
+
+// fonts & text
+
+// font families
+$base-font: "Transat", Helvetica, Arial, sans-serif;
+$wallis-font: "Wallis-Handcraftet", "Transat", Helvetica, Arial, sans-serif;
+
+// text
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$base-font-color: $black;
+
+$font-size-smaller: 13px;
+$font-size-smallest: 12px;
+
+
+$light: 100;
+$normal: 300;
+$bold: 700;
+
+$z-index-modal: 1000;
+
+
+
+// mesurements
+$site-width: 940px;
+
+$gutter-smallest: 5px;
+$gutter-small: 10px;
+$gutter: 20px;
+$gutter-big: $gutter * 2;
+$gutter-bigger: $gutter * 4;
+
+$mobile-gutter-small: 10px;
+$mobile-gutter: 15px;
+$mobile-gutter-large: 30px;
+
+
+
+// sprites & icons
+$icons-spacing:1px;
+$icons2x-spacing:2px;
+
+$icons-dir: "icons";
+$icons2x-dir: "icons2x";
+//$sprites: sprite-map($icons-dir + "/*.png", $spacing: $icons-spacing, $layout: horizontal);
+//$sprites2x: sprite-map($icons2x-dir + "/*.png", $spacing: $icons2x-spacing, $layout: horizontal);
+

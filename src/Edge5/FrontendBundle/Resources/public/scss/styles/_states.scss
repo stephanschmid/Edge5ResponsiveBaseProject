@@ -1,0 +1,115 @@
+.is-disabled-fld,
+.is-disabled-label{
+	@include opacity(.5);
+}
+.is-disabled {
+	@include opacity(0.5);
+	pointer-events: none;
+}
+*[disabled] {
+	//	@include opacity(0.5);
+	pointer-events: none;
+}
+
+html.is-loading {
+	.mobile_nav_toggle {
+		opacity: 0.5;
+		@include animation(rotateAndSkew 1500ms infinite ease-in-out);
+	}
+}
+
+.is-ajax-loading {
+	@include transition( opacity 300ms linear );
+	opacity: 0.5;
+	pointer-events: none;
+	position: relative;
+}
+
+.is-ajax-loading .ajax-load-overlay, .is-ajax-loader:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 20;
+	top: 50%;
+	left: 50%;
+	width: 36px;
+	height: 36px;
+	margin-top: -20px;
+	margin-left: -20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-color: white;
+	opacity: 0.75;
+	border-radius: 20px;
+	//@include retina-graphic('../img/anims/loader-button-white.gif', '../img/anims2x/loader-button-white.gif');
+}
+.ajax-loading-box.is-ajax-loading {
+	padding: 20px;
+	position: relative;
+}
+.is-ajax-loader:before {
+	z-index: 1;
+	top: 50%; left: 50%; right: -5px; bottom: -5px;
+	width: 30px; height: 30px;
+	margin-top: -15px; margin-left: -15px;
+	background-color: #fff;
+	background-color: rgba(255,255,255, 0.8);
+	border: none;
+	background-size: 18px 18px;
+}
+.infinite_scroll--loading {
+	display: block;
+	height: 60px;
+	//background-color: ;
+	text-align: center;
+	//border: 1px solid $c-gray-3;
+	line-height: 50%;
+	position: relative;
+	@include border-radius(2px);
+}
+.ajax-more_trigger {
+	text-decoration: none;
+	text-align: center;
+	display: inline;
+	position: relative;
+	&.is-ajax-loader {
+		color: transparent;
+	}
+
+	@include mobile {
+		margin: $mobile-gutter;
+	}
+}
+.ajax-more_trigger_container {
+	display: none;
+	text-align: center;
+	&.is-visible {
+		display: inline;
+	}
+}
+
+%ajax-spinner-s {
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-top: -12px;
+	margin-left: -12px;
+	opacity: 1;
+	z-index: 1000;
+	//@include retina-graphic('../img/anims/spinner-white-s.png', '../img/anims2x/spinner-white-s.png');
+	@include animation(ajaxSpinner 500ms steps(16) infinite);
+}
+
+@-webkit-keyframes ajaxSpinner {
+	from { background-position: 0; }
+	to { background-position: -384px; }
+}
+@keyframes ajaxSpinner {
+	from { background-position: 0; }
+	to { background-position: -384px; }
+}

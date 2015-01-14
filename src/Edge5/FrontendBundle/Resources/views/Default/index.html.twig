@@ -1,27 +1,195 @@
 {% extends "Edge5FrontendBundle::layout.html.twig" %}
 
 {% block content %}
-<p>
-    Hello {{ 'hello'|trans }}, my name is {{ name }}!
-</p>
-<p>
-    This <a href="{{ url('_home') }}">Page Home</a>.
-    Go to <a href="{{ path('fos_user_security_login') }}">Admin Backend</a>
-</p>
+{#<p>#}
+    {#Hello {{ 'hello'|trans }}, my name is {{ name }}!#}
+{#</p>#}
+{#<p>#}
+    {#This <a href="{{ url('_home') }}">Page Home</a>.#}
+    {#Go to <a href="{{ path('fos_user_security_login') }}">Admin Backend</a>#}
+{#</p>#}
 
-<h3>Responsive utilities test case</h3>
-<p>Resize your browser or load on different devices to test the classes.</p>
-<h4>Visible on...</h4>
-<ul class="responsive-utilities-test">
-    <li class="visible-phone">Phone</li>
-    <li class="visible-tablet">Tablet</li>
-    <li class="visible-desktop">Desktop</li>
-</ul>
-<h4>Hidden on...</h4>
-<ul class="responsive-utilities-test hidden-on">
-    <li class="hidden-phone">Phone</li>
-    <li class="hidden-tablet">Tablet</li>
-    <li class="hidden-desktop">Desktop</li>
-</ul>
+{#<h3>Responsive utilities test case</h3>#}
+{#<p>Resize your browser or load on different devices to test the classes.</p>#}
+{#<h4>Visible on...</h4>#}
+{#<ul class="responsive-utilities-test">#}
+    {#<li class="visible-phone">Phone</li>#}
+    {#<li class="visible-tablet">Tablet</li>#}
+    {#<li class="visible-desktop">Desktop</li>#}
+{#</ul>#}
+{#<h4>Hidden on...</h4>#}
+{#<ul class="responsive-utilities-test hidden-on">#}
+    {#<li class="hidden-phone">Phone</li>#}
+    {#<li class="hidden-tablet">Tablet</li>#}
+    {#<li class="hidden-desktop">Desktop</li>#}
+{#</ul>#}
+
+
+<div class="site-container">
+	<div class="site-page">
+		<div class="site-content">
+			<div class="l-site-width">
+				<div class="l-row l-row-gap l-row-gap-above">
+
+					{# col-1 #}
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+
+					{# col-2 #}
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+
+					{# col-3 #}
+					<div class="l-column l-column-3">
+						<div class="box">l-column-3</div>
+					</div>
+					<div class="l-column l-column-3">
+						<div class="box">l-column-3</div>
+					</div>
+					<div class="l-column l-column-3">
+						<div class="box">l-column-3</div>
+					</div>
+					<div class="l-column l-column-3">
+						<div class="box">l-column-3</div>
+					</div>
+
+					{# col-4 #}
+					<div class="l-column l-column-4">
+						<div class="box">l-column-4</div>
+					</div>
+					<div class="l-column l-column-4">
+						<div class="box">l-column-4</div>
+					</div>
+					<div class="l-column l-column-4">
+						<div class="box">l-column-4</div>
+					</div>
+
+					{# col-5 #}
+					<div class="l-column l-column-5">
+						<div class="box">l-column-5</div>
+					</div>
+					<div class="l-column l-column-2">
+						<div class="box">l-column-2</div>
+					</div>
+					<div class="l-column l-column-5">
+						<div class="box">l-column-5</div>
+					</div>
+
+					{# col-6 #}
+					<div class="l-column l-column-6">
+						<div class="box">l-column-6</div>
+					</div>
+					<div class="l-column l-column-6">
+						<div class="box">l-column-6</div>
+					</div>
+
+					{# col-7 #}
+					<div class="l-column l-column-7">
+						<div class="box">l-column-7</div>
+					</div>
+					<div class="l-column l-column-5">
+						<div class="box">l-column-5</div>
+					</div>
+
+					{# col-8 #}
+					<div class="l-column l-column-8">
+						<div class="box">l-column-8</div>
+					</div>
+					<div class="l-column l-column-4">
+						<div class="box">l-column-4</div>
+					</div>
+
+					{# col-9 #}
+					<div class="l-column l-column-9">
+						<div class="box">l-column-9</div>
+					</div>
+					<div class="l-column l-column-3">
+						<div class="box">l-column-3</div>
+					</div>
+
+					{# col-10 #}
+					<div class="l-column l-column-10">
+						<div class="box">l-column-10</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+
+					{# col-11 #}
+					<div class="l-column l-column-11">
+						<div class="box">l-column-11</div>
+					</div>
+					<div class="l-column l-column-1">
+						<div class="box">l-column-1</div>
+					</div>
+
+					{# col-12 #}
+					<div class="l-column l-column-12">
+						<div class="box">l-column-12</div>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
 
 {% endblock %}

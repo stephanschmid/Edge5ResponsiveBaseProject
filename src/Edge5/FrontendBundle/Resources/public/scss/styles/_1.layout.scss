@@ -1,0 +1,273 @@
+
+.site-container {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.site-page {
+	position: relative;
+	overflow: hidden;
+}
+
+.site-content {
+	clear: both;
+}
+
+.l-clearfix {
+	@extend %clearfix;
+}
+
+.l-site-width {
+	position: relative;
+	width: $site-width;
+	width: ($site-width / $base-font-size) * 1rem;
+	margin: 0 auto;
+	@extend %clearfix;
+
+	@include tablet {
+		@include box-sizing(border-box);
+		width: auto;
+		padding: 0 20px;
+	}
+}
+
+.l-site-padding {
+
+//	@include mobile {
+//		padding-left: 15px;
+//		padding-right: 15px;
+//	}
+}
+
+// lists
+.l-horizontal-list {
+	list-style: none;
+	margin: 0; padding: 0;
+	> li {
+		@include inline-block(top);
+	}
+}
+.l-horizontal {
+	@include webkit-inline-block-fix;
+	> * {
+		@include inline-block(top);
+	}
+}
+.l-horizontal-samewidth-list {
+	list-style: none;
+	margin: 0; padding: 0;
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	> li {
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		width: 500px;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+}
+
+.lt-ie10 {
+	.l-horizontal-samewidth-list {
+		display: table;
+		table-layout: fixed;
+		> li {
+			width: auto;
+			height: 100%;
+			display: table-cell;
+		}
+	}
+}
+// column layouts
+// http://csswizardry.com/2013/02/responsive-row-systems-a-solution/
+
+.l-row {
+	margin-right: -($gutter + 1px);
+	font-size: 0.0000001px;
+}
+
+.l-row-right {
+	text-align: right;
+}
+
+
+
+
+.l-column {
+	@include box-sizing(border-box);
+	@include inline-block(top);
+	padding-right: $gutter;
+	@include font-size($base-font-size);
+
+	&.l-mobile-borderless {
+		padding: 0;
+		padding-right: 20px;
+	}
+}
+
+
+
+
+.l-no-gap {
+	margin: 0px !important;
+}
+
+.l-gap, .l-row.l-row-gap > .l-column,
+.l-row.l-row-gap > .l-column {
+	margin-bottom: $gutter;
+}
+.l-gap.l-gap-small, .l-row.l-row-gap.l-row-gap-small > .l-column {
+	margin-bottom: $gutter / 2;
+}
+.l-gap.l-gap-large, .l-row.l-row-gap.l-row-gap-large > .l-column {
+	margin-bottom: $gutter * 2;
+}
+.l-gap.l-gap-larger, .l-row.l-row-gap.l-row-gap-larger > .l-column {
+	margin-bottom: $gutter * 3;
+}
+.l-gap.l-gap-largest, .l-row.l-row-gap.l-row-gap-largest > .l-column {
+	margin-bottom: 80px;
+}
+
+
+.l-row-gap-above {
+	margin-top: $gutter;
+}
+.l-row-gap-above.l-gap-small {
+	margin-top: $gutter / 2;
+}
+.l-row-gap-above.l-gap-large {
+	margin-top: $gutter * 2;
+}
+
+.l-row.l-row-gap.l-row-gap-small {
+	margin-bottom: $gutter / -2;
+}
+.l-row.l-row-gap.l-row-gap-large {
+	margin-bottom: $gutter * -2;
+}
+.l-row.l-row-gap {
+	margin-bottom: 0;
+}
+.l-row.l-row-gap.l-row-gutter {
+	margin-bottom: $gutter * -1;
+
+	@include mobile {
+		margin-bottom: -15px !important;
+	}
+}
+
+
+
+
+
+
+
+
+$columns: 12;
+$precperc: 99.999%;
+
+@mixin rowMath($totalColumns, $precperc, $device:"") {
+	@if $device != "" {
+		$device : $device + "-"
+	}
+	@for $i from 1 through $totalColumns {
+		.#{l-column}-#{$device}#{$i} {
+			width: $precperc / $totalColumns * $i;
+		}
+	}
+}
+
+// Desktop
+@include rowMath($columns, $precperc);
+
+// Other Devices
+@include print {
+	@include rowMath($columns, $precperc, "print");
+}
+@include tablet {
+	@include rowMath($columns, $precperc, "tablet");
+}
+@include tablet-portrait {
+	@include rowMath($columns, $precperc, "tablet-portrait");
+}
+@include mobile {
+	@include rowMath($columns, $precperc, "mobile");
+}
+@include mobile-portrait {
+	@include rowMath($columns, $precperc, "mobile-portrait");
+}
+
+
+
+
+
+
+
+
+
+.l-leftright {
+	@extend %clearfix;
+	.l-left {
+		display: block;
+		float: left;
+	}
+	.l-right {
+		display: block;
+		float: right;
+	}
+}
+.l-leftright-table {
+	display: table;
+	width: 100%;
+	@include box-sizing(border-box);
+	.l-left, .l-right {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.l-right {
+		text-align: right;
+	}
+}
+@mixin leftrightClasses( $device ) {
+	.l-leftright.l-#{$device}-leftright-reset {
+		.l-left, .l-right {
+			float: none;
+		}
+	}
+	.l-leftright-table.l-#{$device}-leftright-reset {
+		display: block;
+		.l-left, .l-right {
+			display: block;
+			text-align: left;
+		}
+	}
+}
+@include tablet {
+	@include leftrightClasses( "tablet" );
+}
+@include tablet-portrait {
+	@include leftrightClasses( "tablet-portrait" );
+}
+@include mobile {
+	@include leftrightClasses( "mobile" );
+}
+@include mobile-portrait {
+	@include leftrightClasses( "mobile-portrait" );
+}
+
+
+.l-left-float{
+	float: left;
+}
+.l-right-float{
+	float: right;
+}
+.l-clear-float{
+	clear: left;
+}

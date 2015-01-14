@@ -1,0 +1,221 @@
+// Hide visually
+
+// See http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// for discussion of different solutions
+
+@mixin custom_visuallyhidden() {
+	border: medium none;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+@mixin reset_visuallyhidden() {
+	clip: auto;
+	height: auto;
+	margin: auto;
+	overflow: auto;
+	padding: 0;
+	position: static;
+	width: auto;
+}
+
+%custom_visuallyhidden {
+	@include custom_visuallyhidden;
+}
+
+%reset_visuallyhidden {
+	@include reset_visuallyhidden;
+}
+
+
+%custom_visuallyhidden_focusable {
+	@extend %custom_visuallyhidden;
+
+	&:active,
+	&:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+
+// Clearfix helper
+// Used to contain floats: h5bp.com/q
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
+// hidden contents
+.is-visuallyhidden {
+	@extend %custom_visuallyhidden;
+}
+/*
+.is-visible {
+	display: block;
+}
+.is-hidden {
+	display: none;
+}
+.js .is-hidden-js {
+	display: none;
+}*/
+
+// Responsive helper classes:
+
+@mixin hiddenHelperclasses( $device ) {
+	.is-hidden-#{$device} {
+		display: block !important;
+	}
+}
+@mixin visibleHelperclasses( $device ){
+	.is-visible-#{$device} {
+		display: none !important;
+	}
+}
+
+.is-visible-mobile-portrait {
+	display: none !important;
+}
+.is-visible-mobile {
+	display: none !important;
+}
+.is-visible-tablet {
+	display: none !important;
+}
+.is-visible-tablet-portrait {
+	display: none !important;
+}
+.is-hidden-desktop {
+	display: none !important;
+}
+.is-visible-desktop {
+	display: block !important;
+}
+
+.is-hidden-js {
+	display: none;
+}
+.no-js .is-hidden-js {
+	display: block;
+}
+
+.js .is-hidden-js {
+	display: none;
+}
+.no-js .is-visible-js {
+	display: none;
+}
+
+@include tablet {
+	.is-hidden-desktop {
+		display: block !important;
+	}
+	.is-visible-desktop {
+		display: none !important;
+	}
+	.is-visible-tablet {
+		display: block !important;
+	}
+	.is-hidden-tablet {
+		display: none !important;
+	}
+}
+@include tablet-portrait {
+	.is-visible-tablet-portrait {
+		display: block !important;
+	}
+	.is-hidden-tablet-portrait {
+		display: none !important;
+	}
+}
+
+@include mobile {
+	.is-visible-mobile {
+		display: block !important;
+	}
+	.is-hidden-mobile {
+		display: none !important;
+	}
+}
+
+@include mobile-portrait {
+	.is-visible-mobile-portrait {
+		display: block !important;
+	}
+	.is-hidden-mobile-portrait {
+		display: none !important;
+	}
+}
+
+@include print {
+	.is-visible-print {
+		display: block !important;
+	}
+	.is-hidden-print {
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+body:after {
+	display: none;
+	content: 'desktop';
+	@include tablet {
+		content: 'tablet';
+	}
+	@include tablet-portrait {
+		content: 'tablet-portrait';
+	}
+	@include mobile {
+		content: 'mobile';
+	}
+	@include mobile-portrait {
+		content: 'mobile-portrait';
+	}
+}
+
+.media-dispatcher-fallback {
+	display: none;
+	margin-bottom: 0px;
+	@include tablet {
+		margin-bottom: 1px;
+	}
+	@include tablet-portrait {
+		margin-bottom: 2px;
+	}
+	@include mobile {
+		margin-bottom: 3px;
+	}
+	@include mobile-portrait {
+		margin-bottom: 4px;
+	}
+}
+
+body:before {
+	display: none;
+	content: '';
+	@include retina {
+		content: 'retina';
+	}
+}
