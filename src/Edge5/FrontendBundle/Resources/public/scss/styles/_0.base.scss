@@ -18,15 +18,13 @@
 }
 
 html {
-	background-color: #eeeeee;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background-color: $white;
+
 	@include mobile {
 		height:100%;
 	}
-}
-
-html {
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -40,7 +38,6 @@ input {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 ::selection {
 	background: #EE162D;
 	color: $white;
@@ -52,13 +49,12 @@ input {
 p, h1, h2, h3, h4, h5, h6 {
 	@include hyphens(auto);
 }
-
 html,
 button,
 input,
 select,
 textarea {
-  color: #222;
+  color: $black;
 }
 
 /*
@@ -108,6 +104,11 @@ fieldset {
 
 textarea {
   resize: vertical;
+}
+
+/* Make HTML 5 elements display block-level for consistent styling */
+header, aside, section, nav, article, footer, address {
+	display: block;
 }
 
 /* ==========================================================================

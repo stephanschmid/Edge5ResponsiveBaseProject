@@ -17,7 +17,7 @@ $black: #000;
 // fonts & text
 
 // font families
-$base-font: "Transat", Helvetica, Arial, sans-serif;
+$base-font: "Roboto", Helvetica, Arial, sans-serif;
 $wallis-font: "Wallis-Handcraftet", "Transat", Helvetica, Arial, sans-serif;
 
 // text
@@ -40,9 +40,9 @@ $z-index-modal: 1000;
 // mesurements
 $site-width: 940px;
 
-$gutter-smallest: 5px;
-$gutter-small: 10px;
 $gutter: 20px;
+$gutter-small: 10px;
+$gutter-smaller: 5px;
 $gutter-big: $gutter * 2;
 $gutter-bigger: $gutter * 4;
 

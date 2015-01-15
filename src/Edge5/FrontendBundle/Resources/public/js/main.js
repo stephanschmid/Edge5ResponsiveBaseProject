@@ -12,7 +12,7 @@ requirejs.config({
     }
 });
 
-require(['jquery', 'dummies/dummy'], function($, dummy){
+require(['jquery', 'dummies/dummy', 'scripts/html5Elements'], function($, dummy, html5Elements){
 
     /*
     $(function() {
@@ -20,5 +20,6 @@ require(['jquery', 'dummies/dummy'], function($, dummy){
     });
     */
 
-    dummy.sayHello();
+	dummy.sayHello();
+	html5Elements.generateHtml5Elements();
 });

@@ -66,7 +66,7 @@
 .is-visuallyhidden {
 	@extend %custom_visuallyhidden;
 }
-/*
+
 .is-visible {
 	display: block;
 }
@@ -75,7 +75,7 @@
 }
 .js .is-hidden-js {
 	display: none;
-}*/
+}
 
 // Responsive helper classes:
 
@@ -192,23 +192,6 @@ body:after {
 	}
 	@include mobile-portrait {
 		content: 'mobile-portrait';
-	}
-}
-
-.media-dispatcher-fallback {
-	display: none;
-	margin-bottom: 0px;
-	@include tablet {
-		margin-bottom: 1px;
-	}
-	@include tablet-portrait {
-		margin-bottom: 2px;
-	}
-	@include mobile {
-		margin-bottom: 3px;
-	}
-	@include mobile-portrait {
-		margin-bottom: 4px;
 	}
 }
 

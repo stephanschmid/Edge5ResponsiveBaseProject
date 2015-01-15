@@ -108,7 +108,7 @@
 }
 
 
-
+// Gaps on top or bottom
 
 .l-no-gap {
 	margin: 0px !important;
@@ -147,7 +147,7 @@
 
 
 
-
+// Generate columns for all screens
 
 $columns: 12;
 $precperc: 99.999%;
@@ -183,6 +183,13 @@ $precperc: 99.999%;
 	@include rowMath($columns, $precperc, "mobile-portrait");
 }
 
+/*
+l-column-*
+l-column-tablet-*
+l-column-tablet-portrait-*
+l-column-mobile-*
+l-column-mobile-portrait-*
+*/
 
 
 
@@ -190,6 +197,7 @@ $precperc: 99.999%;
 
 
 
+// Left or right classes
 
 .l-leftright {
 	@extend %clearfix;
