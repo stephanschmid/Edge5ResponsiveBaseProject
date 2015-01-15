@@ -1,16 +1,16 @@
-Edge5MobileFirstBase Project Framework
+Edge5ResponsiveBase Project Framework
 ================================
 
 This repository serves as a skeleton for Symfony2 / Propel based Mobile First web apps.
 
-It contains an empty FrontendBundle and a customizable BackendBundle based on the [`Edge5AppBackendBundle`](https://github.com/Edge5/Edge5MobileFirstBaseProject)
+It contains an empty FrontendBundle and a customizable BackendBundle based on the [`Edge5AppBackendBundle`](https://github.com/Edge5/Edge5ResponsiveBaseProject)
 
 ### Installation
 
-1. Clone Edge5MobileFirstBaseProject repository
+1. Clone Edge5ResponsiveBaseProject repository
 ----------------------------------
 
-    $ git clone git@github.com:Edge5/Edge5MobileFirstBaseProject.git MyAppProjectFolder
+    $ git clone git@github.com:Edge5/Edge5ResponsiveBaseProject.git MyAppProjectFolder
     $ cd MyAppProjectFolder
 
 2. Install project and setup config parameters
